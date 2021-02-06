@@ -1,0 +1,293 @@
+/*@import "https://cdn.jsdelivr.net/gh/tretapey/raisincss@1.1.0/raisin.min.css";*/
+.\.container {
+    flex-direction: column;
+}
+#valintaContainer {
+    flex-direction: column;
+}
+
+.img-thumbnail {
+    height: 100px;
+    width: 100px;
+}
+
+.viivastoContainer {
+
+}
+
+#div1 {
+    display: block;
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    background-color: aquamarine;
+}
+
+.example-parent {
+    color: black;
+    display: flex;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.example-origin {
+    width: 150px;
+    padding: 10px;
+    display: inline-flex;
+}
+
+.example-draggable {
+    background-color: #4AAE9B;
+    font-weight: normal;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border: 2px solid #DFA612;
+}
+
+.example-dropzone {
+
+    background-color: #fff;
+    border: 2px solid #337ab7;
+    width: 100px;
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.dropzone-container {
+    margin-left: 10px;
+    width: 1200px;
+}
+
+#alaContainer {
+    padding-left: 20%;
+}
+
+.hideAlaContainer {
+    visibility: hidden;
+}
+
+.hideHarmoniaContainer {
+    visibility: hidden;
+}
+
+.hideSointuContainer {
+    visibility: hidden;
+}
+
+#div1 {
+    display: block;
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    background-color: aquamarine;
+}
+
+
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+body {font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;font-weight: 300;}
+
+article{width:80%;margin: 10px auto;border:1px solid #ccc;border-radius:5px;}
+h1,h2,h3{font-weight:bold;color:#fff;margin-left:10px;}
+h1{margin-bottom:10px;font-size:32px;}
+h2{font-size:28px;}
+h2 a{color:#fff;}
+h3{margin-top:10px;font-size:24px;}
+
+header{width:90%;margin:20px auto;padding:10px;overflow:auto;background-color:#008080;}
+
+header img.html5-logo{display:block;float:left;width:100px;}
+
+#content{width:90%;margin:20px auto;clear:left;}
+
+.instructions{ margin: 20px 0;padding:20px;background-color:#ededed;border:4px solid #ccc;border-radius:5px;color:#333;font-size:24px;line-height:28px;}
+
+.instructions a{font-weight:bold;color:#008080;}
+
+.drop-elements{
+    margin: 0 0 0px;
+    padding:0px 0;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.dropElement-chord {
+    display:inline-block;
+    width:113px;
+    margin-right:10px;
+    height:40px;
+    padding:0%;
+    background-color:#bce8f1;
+}
+
+.dropElement-harm {
+    display:inline-block;
+    width:130px;
+    margin-right:10px;
+    height:40px;
+    padding:0%;
+    background-color:#bce8f1;
+}
+
+.dropped{}
+
+.dropElement:last-child{margin-right:0;}
+
+.drag-elements{padding-top:0px;overflow: visible;text-align: start;}
+
+.dropElement,.drag-elements,.dragElement{border-radius:5px;}
+
+.dragElement{
+    display:inline-block;
+    margin: 0 auto;width: 113px;
+    height:40px;
+    color:black;
+    font-weight:bold;
+    text-align: center;
+    line-height: 40px;
+}
+
+.drag-elements .dragElement{margin-right:10px;margin-left: 0px;}
+
+.drag-elements .dragElement:last-child{margin-right:0;}
+
+.dragElement:hover{cursor: pointer;
+}
+
+
+.dragEnter{background-color:#33A0A0;}
+.hasChild{background-color:#ffffff}
+
+.blueBorder{border-color: black;}
+
+.copyright{margin:20px 0;text-align:center;}
+
+.copyright, .copyright a{font-weight:bold;color:#008080;}
+
+.chordBox{height:160px;border:4px solid #ccc;border-radius:5px;display: flex; flex-direction: column}
+
+.tensionBox{height:60px;}
+.chordHeader{text-align: center;}
+
+.chordDraggable{
+    display:inline-block;
+    margin: 0 auto;
+    width: 113px;
+    height:40px;
+    background-color:#bce8f1;
+    color:black;
+    font-weight:bold;
+    text-align: center;
+    line-height: 40px;
+}
+
+#writeNoteButton{height: 50px; width: 50px; background-color: #337ab7}
+#loginContainer{display: flex; align-content: center; flex-direction: column; margin-left: 20%;}
+#kirjauduButton{margin-top: 16px}
+#rekisteröidyButton{margin-top: 16px}
+#loginPassConfirmHide{visibility: hidden}
+
+
+
+.netlify-identity-item{
+    width: 100px;
+    height: 50px;
+    background-color: #337ab7;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    border: 2px solid black;
+    margin-top: 16px;
+    line-height: 40px;
+}
+
+.netlify-identity-signup{
+    color: #ffffff;
+}
+.netlify-identity-login{
+    color: #ffffff;
+}
+
+.slideshow-container{
+    display: flex;
+    background-color: #4AAE9B;
+    width: 400px;
+    margin: 15px;
+    padding: 15px;
+}
+
+.plain-hint-container{
+    display: flex;
+    background-color: #4AAE9B;
+    width: 400px;
+    margin: 15px;
+    padding: 15px;
+}
+
+.hintValContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+#headerLogo{
+    width: 50px;
+    height: 50px;
+}
+
+.tahtiContainer {
+    margin-right: 30px;
+}
+
+#jatkaButton {
+    width: 500px;
+    height: 100px;
+    background-color: #337ab7;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    border: 2px solid black;
+    margin-top: 16px;
+    line-height: 70px;
+}

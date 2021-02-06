@@ -118,9 +118,11 @@ $("#defaultNextBtn").on("click", function() {
 $("#primaryNextBtn").on("click", function() {
     $("#collapseSuccess").collapse('show');
     $("#collapsePrimary").collapse('hide');
-    magicMan()
+
     hintSetter()
     hideHarm()
+    keySelection(selectedSavellaji)
+    magicMan()
 });
 
 $("#primaryPrevBtn").on("click", function() {
@@ -133,7 +135,7 @@ $("#successNextBtn").on("click", function() {
     $("#collapseInfo").collapse('show');
     $("#collapseSuccess").collapse('hide');
     hideChord()
-    keySelection(selectedSavellaji)
+
 });
 
 $("#successPrevBtn").on("click", function() {

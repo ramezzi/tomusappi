@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rhggfghfgh</title>
+
+    <script src="https://unpkg.com/vexflow/releases/vexflow-debug.js"></script>
+</head>
+<body>
+
+<div class="input">
+    <div class="container">
+        <div class="row">
+
+            <!-- Information of usage -->
+            <div class="col-sm">
+                <h2>Motif input</h2>
+                <p>Enter the first notes of the melody you want to generate with AI</p>
+                <!-- Form to enter the seed notes -->
+                <form id="input-form">
+                    <div class="form-row">
+                        <div class="form-group col-md-2">
+                            <label for="input-duration">Duration</label>
+                            <select id="input-duration" class="form-control" required="">
+                                <option value="" selected="" disabled="">...</option>
+                                <option value="1">𝅝</option>
+                                <option value="2">𝅗𝅥</option>
+                                <option value="4">𝅘𝅥</option>
+                                <option value="8">𝅘𝅥𝅮</option>
+                                <option value="16">𝅘𝅥𝅯</option>
+                                <option value="r1">𝄻</option>
+                                <option value="r2">𝄼</option>
+                                <option value="r4">𝄽</option>
+                                <option value="r8">𝄾</option>
+                                <option value="r16">𝄿</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="input-pitch">Pitch</label>
+                            <select id="input-pitch" class="form-control" required="">
+                                <option value="" selected="" disabled="">...</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="E">E</option>
+                                <option value="F">F</option>
+                                <option value="G">G</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="input-accidental">Accidental</label>
+                            <select id="input-accidental" class="form-control" required="">
+                                <option value="" selected="" disabled="">...</option>
+                                <option value="b">♭</option>
+                                <option value="">♮</option>
+                                <option value="#">♯</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="input-octave">Octave</label>
+                            <select id="input-octave" class="form-control" required="">
+                                <option value="" selected="" disabled="">...</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="input-submit" disabled="">Add</button>
+<!--                    <label for="submit-input" class="text-danger small" id="input-info">You can't add more notes to your motif</label>-->
+                </form>
+            </div>
+
+            <!-- Result of the input seed -->
+            <div class="col-sm">
+                <div class="row">
+
+
+
+                    <div class="utils">
+                        <span id="clickable-add-model" class="clickable" data-toggle="modal" data-target="#uploadModel"><i class="fas fa-plus" aria-hidden="true"></i></span>
+                    </div>
+                    <div class="utils">
+                        <span id="clickable-undo" class="clickable"><i class="fas fa-undo" aria-hidden="true"></i></span>
+                    </div>
+                </div>
+<!--                stave-->
+                <div id="myStave"></div>
+<!--                stave-->
+                <div id="myStave2"></div>
+                <div class="input-controls">
+                    <button class="btn btn-primary" id="input-eraser">
+                        <i class="fas fa-eraser" aria-hidden="true"></i> Erase
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="../controllers/testi4.js"></script>
+
+</body>
+</html>

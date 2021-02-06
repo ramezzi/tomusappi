@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TOMUSÄPPI</title>
+
+    <script src="https://unpkg.com/vexflow/releases/vexflow-debug.js"></script>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <link rel="icon" href="../img/tomusLogo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+
+<!header-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand navbar-dark bg-primary" href="../index.html">Tomusäppi</a>
+        <img src="../img/tomusLogo.png" id="headerLogo">
+
+        <div class="navbar-dark bg-primary" id="navbarNavAltMarkup">
+            <div class="navbar-nav ">
+                <a class="nav-link active navbar-dark bg-primary" aria-current="page" href="../index.html">Home</a>
+                <a class="nav-link navbar-dark bg-primary" href="home.html">Uusi sävellys</a>
+                <a class="nav-link disabled navbar-dark bg-primary" href="#" tabindex="-1" aria-disabled="true">Tallennetut sävellykset</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="header1"></div>
+
+    <!valintaprosessi-->
+    <div class="container" id="valintaContainer">
+        <div class="panel-group col-lg-12 " id="accordion">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="default" data-parent="#accordion" href="#collapseDefault">Tyylilajin valinta</a>
+                    </h4>
+                </div>
+                <div id="collapseDefault" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <p>Valitse sävellyksesi tyylilaji ja klikkaa "Next"</p>
+
+                    <div class ="hintValContainer">
+
+                        <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-primary" id="jazz">Jazzz</button>
+                                    <button type="button" class="btn btn-primary" id="bossanova">Bossa Nova</button>
+                                    <button type="button" class="btn btn-primary" id="poprock">Pop/Rock</button>
+                                    <button type="button" class="btn btn-primary" id="kamari">Kamarimusiikki</button>
+                                </div>
+
+
+                            </div>
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Joku muu?" aria-label="Joku muu?" aria-describedby="btnGroupAddon" id="jokumuu">
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-primary" id="3sointu">Kolmisoinnut</button>
+                                    <button type="button" class="btn btn-primary" id="4sointu">Nelisoinnut</button>
+                                </div>
+                            </div>
+                        </div>
+
+                            <div class="slideshow-container" id="hintBox1">
+                                Voit myös halutessasi kirjoittaa tyhjään kentään vapaavalintaisen genren. Se voi olla mitä vain.
+                                Esimerkiksi Tango, Samba, tai R’n’B. Pohdi ja valitse haluatko käyttää kolmi- vai nelisointuja.
+                                Nelisoinnuissa on enemmän väriä, kuin kolmisoinnuissa. Monissa tyylilajeissa kolmisoinnut
+                                kuitenkin kuulostavat nelisointuja tutummilta.
+                            </div>
+                    </div>
+
+                        <button class="btn btn-success btn-md pull-right" id="defaultNextBtn">Next</button>
+                    </div>
+                </div>
+            </div> <!-- default -->
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="primary" data-parent="#accordion" href="#collapsePrimary">Sävellajin valinta</a>
+                    </h4>
+                </div>
+                <div id="collapsePrimary" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>Valitse sävellyksesi sävellaji ja klikkaa "Next"</p>
+
+                        <div class="hintValContainer">
+                            <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-primary" id="cMajor">C duuri</button>
+                                        <button type="button" class="btn btn-primary" id="aMinor">A molli</button>
+                                    </div>
+
+                                </div>
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-primary" id="gMajor">G duuri</button>
+                                        <button type="button" class="btn btn-primary" id="eMinor">E molli</button>
+                                    </div>
+
+                                </div>
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-primary" id="dMajor">D duuri</button>
+                                        <button type="button" class="btn btn-primary" id="bMinor">B molli</button>
+                                    </div>
+
+                                </div>
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-primary" id="fMajor">F duuri</button>
+                                        <button type="button" class="btn btn-primary" id="dMinor">D molli</button>
+                                    </div>
+
+                                </div>
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-primary" id="bbMajor">Bb duuri</button>
+                                        <button type="button" class="btn btn-primary" id="gMinor">G molli</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="slideshow-container" id="hintBox2">
+                                Jos sävellät ensimmäistä kertaa ja koet, että teoriaosaamisesi on lähtökuopissa, kannattaa
+                                säveltää duurissa.
+                            </div>
+                        </div>
+
+
+                        <button class="btn btn-warning btn-md pull-left" id="primaryPrevBtn">Prev</button>
+                        <button class="btn btn-success btn-md pull-right" id="primaryNextBtn">Next</button>
+                    </div>
+                </div>
+            </div> <!-- primary -->
+
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="success" data-parent="#accordion" href="#collapseSuccess">Harmonia</a>
+                    </h4>
+                </div>
+                <div id="collapseSuccess" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>Valitse alta harmonia ebin</p>
+
+                        <div class="hintValContainer">
+                            <div >
+                                <div class="drag-elements droppable multipleChildren hasChild">
+                                    <div id="drag1" class="dragElement blueBorder">Toonika</div>
+                                    <div id="drag2" class="dragElement blueBorder">Subdominantti</div>
+                                    <div id="drag3" class="dragElement blueBorder">Dominantti</div>
+                                </div>
+                            </div>
+
+                            <div class="slideshow-container" id="hintBox4">
+                                Soinnut jaetaan kolmeen kategoriaan jännitteensä mukaan. Ne ovat Toonika, Subdominantti ja
+                                Dominantti. Toonika on ns. kotisointu, jolla ei ole tarvetta purkautua mihinkään. Subdominantilla
+                                on hieman liikettä havaittavissa. Dominantti kaipaa purkausta. Toonikan ja subdominantin jälkeen
+                                voi tulla mitä vain. Usein dominanttia seuraa Toonika. Useimmiten musiikki loppuu toonikaan.
+                            </div>
+                        </div>
+
+                        <button class="btn btn-warning btn-md pull-left" id="successPrevBtn">Prev</button>
+                        <button class="btn btn-success btn-md pull-right" id="successNextBtn">Next</button>
+                        </div>
+
+
+                    </div>
+                </div>
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="info" data-parent="#accordion" href="#collapseInfo">Sointukierto</a>
+                    </h4>
+                </div>
+                <div id="collapseInfo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>Valikoi sävellyksellesi sointukierto alta</p>
+
+                       <div class="hintValContainer">
+                           <div class="example-parent">
+                               <div class="drag-elements droppable multipleChildren hasChild chordBox" id="tonChordContainer">
+                                   <div class="chordHeader">Toonika</div>
+
+                               </div>
+                               <div class="drag-elements droppable multipleChildren hasChild chordBox" id="subdomChordContainer">
+                                   <div class="chordHeader">Subdominantti</div>
+
+                               </div>
+                               <div class="drag-elements droppable multipleChildren hasChild chordBox" id="domChordContainer">
+                                   <div class="chordHeader">Dominantti</div>
+
+                               </div>
+                           </div>
+                           <div class="slideshow-container">
+                               <div class="mySlides2" id="hintBox3a"></div>
+
+                               <div class="mySlides2" id="hintBox3b"></div>
+
+                               <div class="mySlides2" id="hintBox3c"></div>
+
+                               <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                               <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+                           </div>
+                       </div>
+
+                        <button class="btn btn-warning btn-md pull-left" id="infoPrevBtn">Prev</button>
+                        <button class="btn btn-success btn-md pull-right" id="infoNextBtn" >Next</button>
+                    </div>
+                </div>
+            </div> <!-- info -->
+
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="danger" data-parent="#accordion" href="#collapseWarning">Melodian kirjoitus</a>
+                    </h4>
+                </div>
+                <div id="collapseWarning" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>Alla näkyviä komentoja käyttäen, kirjoita melodiasi viivastolle.</p>
+                        <p id="inputInfo"></p>
+
+                        <div id="writeWNoteButton" type="button" class="btn btn-primary input-button" >Kokonuotti 𝅝</div>
+                        <div id="writeHNoteButton" onclick="" type="button" class="btn btn-primary" >Puolinuotti 𝅗𝅥</div>
+                        <div id="writeQNoteButton" onclick="" type="button" class="btn btn-primary" >Neljäsosanuotti 𝅘𝅥</div>
+                        <div id="eraseNoteButton" onclick="" type="button" class="btn btn-primary" >Erase</div>
+                        <div id="noteUndoButton" onclick="" type="button" class="btn btn-primary" >Undo</div>
+<!--                        <div id="toLeftButton" type="button" class="btn btn-primary">Left (soon)</div>-->
+<!--                        <div id="toRightButton" type="button" class="btn btn-primary">Right (soon)</div>-->
+                        <div id="toUpButton" type="button" class="btn btn-primary">Up</div>
+                        <div id="toDownButton" type="button" class="btn btn-primary">Down</div>
+
+                        <div class="hintValContainer">
+                            <div class="slideshow-container">
+                                <div class="mySlides1" id="hintBox5a">
+
+                                </div>
+
+                                <div class="mySlides1" id="hintBox5b">
+
+                                </div>
+
+                                <div class="mySlides1" id="hintBox5c">
+
+                                </div>
+
+                                <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-warning btn-md pull-left" id="warningPrevBtn">Prev</button>
+                        <button class="btn btn-success btn-md pull-right" id="warningNextBtn">Next</button>
+                    </div>
+                </div>
+            </div> <!-- warning -->
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-parent="accordion" href="#collapseDanger">Viimeistely ja esikatselu</a>
+                    </h4>
+                </div>
+                <div id="collapseDanger" class="panel=collapse collapse">
+                    <div class="panel-body">
+                        <p>Hello I am the panel body</p>
+
+                        <div class="slideshow-container" id="hintBox12">
+                            Pohdi minkälaisia huomioita teit säveltäessä. Aiotko säveltää lisää? Aiotko seuraavalla kerralla
+                            kokeilla jotain aivan muuta? Muista kokeilla myös atonaalista tai modaalista säveltämistä!
+                        </div>
+
+                        <button class="btn btn-warning btn-md pull-left" id="dangerPrevBtn">Prev</button>
+                        <button class="btn btn-danger btn-md pull-right">Submit</button>
+                    </div>
+                </div>
+            </div> <!-- danger -->
+            </div> <!-- success -->
+
+
+
+        </div>
+
+
+    </div>
+    <!nuottiviivasto-->
+<div id="alaContainer" >
+    <div id="dropzoneContainer1" class="dropzone-container ">
+        <div class="drop-elements">
+            <div class="tahtiContainer">
+                <div class="dropElement-chord droppable hideSointuContainer"></div>
+                <div class="dropElement-harm droppable hideHarmoniaContainer"></div>
+            </div>
+            <div class="tahtiContainer">
+                <div class="dropElement-chord droppable hideSointuContainer"></div>
+                <div class="dropElement-harm droppable hideHarmoniaContainer"></div>
+            </div>
+            <div class="tahtiContainer">
+                <div class="dropElement-chord droppable hideSointuContainer"></div>
+                <div class="dropElement-harm droppable hideHarmoniaContainer"></div>
+            </div>
+            <div class="tahtiContainer">
+                <div class="dropElement-chord droppable hideSointuContainer"></div>
+                <div class="dropElement-harm droppable hideHarmoniaContainer"></div>
+            </div>
+        </div>
+    </div>
+    <div class="viivastoContainer">
+        <div id="stave"></div>
+    </div>
+<!--    <div id="dropzoneContainer1" class="dropzone-container hideHarmoniaContainer">-->
+<!--        <div class="drop-elements">-->
+<!--            <div class="dropElement droppable"></div>-->
+<!--            <div class="dropElement droppable"></div>-->
+<!--            <div class="dropElement droppable"></div>-->
+<!--            <div class="dropElement droppable"></div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div id="dropzoneContainer4" class="dropzone-container hideHarmoniaContainer">-->
+<!--        <div class="drop-elements">-->
+<!--            <div class="dropElement droppable"></div>-->
+<!--            <div class="dropElement droppable"></div>-->
+<!--            <div class="dropElement droppable"></div>-->
+<!--            <div class="dropElement droppable"></div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <div id="dropzoneContainer2" class="dropzone-container ">
+        <div class="drop-elements">
+            <div class="tahtiContainer">
+                <div class="dropElement-chord droppable hideSointuContainer"></div>
+                <div class="dropElement-harm droppable hideHarmoniaContainer"></div>
+            </div>
+            <div class="tahtiContainer">
+                <div class="dropElement-chord droppable hideSointuContainer"></div>
+                <div class="dropElement-harm droppable hideHarmoniaContainer"></div>
+            </div>
+            <div class="tahtiContainer">
+                <div class="dropElement-chord droppable hideSointuContainer"></div>
+                <div class="dropElement-harm droppable hideHarmoniaContainer"></div>
+            </div>
+            <div class="tahtiContainer">
+                <div class="dropElement-chord droppable hideSointuContainer"></div>
+                <div class="dropElement-harm droppable hideHarmoniaContainer"></div>
+            </div>
+        </div>
+    </div>
+    <div class="viivastoContainer">
+        <div id="stave2"></div>
+    </div>
+<!--    <div id="dropzoneContainer3" class="dropzone-container hideHarmoniaContainer" >-->
+<!--        <div class="drop-elements">-->
+<!--            <div class="dropElement droppable"></div>-->
+<!--            <div class="dropElement droppable"></div>-->
+<!--            <div class="dropElement droppable"></div>-->
+<!--            <div class="dropElement droppable"></div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <div id="container"></div>
+
+</div>
+
+<!--<script src="../vex.js"></script>-->
+
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"-->
+<!--        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="../components/valinta.js"></script>
+<script src="../controllers/valintaController.js"></script>
+<script src="../vex2.js"></script>
+<script src="../models/keyModel.js"></script>
+<script src="../models/hintModel.js"></script>
+<script src="../controllers/testi.js"></script>
+
+
+
+<script>
+    var slideIndex = [1,1];
+    var slideId = ["mySlides1", "mySlides2"]
+    showSlides(1, 0);
+    showSlides(1, 1);
+
+    function plusSlides(n, no) {
+        showSlides(slideIndex[no] += n, no);
+    }
+
+    function showSlides(n, no) {
+        var i;
+        var x = document.getElementsByClassName(slideId[no]);
+        if (n > x.length) {slideIndex[no] = 1}
+        if (n < 1) {slideIndex[no] = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex[no]-1].style.display = "block";
+    }
+</script>
+
+</body>
+</html>

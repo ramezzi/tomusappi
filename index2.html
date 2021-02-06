@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/styles.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand navbar-dark bg-primary" href="index2.html">Tomusäppi</a>
+
+        <div class="navbar-dark bg-primary" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active navbar-dark bg-primary" aria-current="page" href="#">Home</a>
+                <a class="nav-link navbar-dark bg-primary" href="./views/home.html">Uusi sävellys</a>
+                <a class="nav-link disabled navbar-dark bg-primary" href="#" tabindex="-1" aria-disabled="true">Rekisteröityminen</a>
+                <a class="nav-link disabled navbar-dark bg-primary" href="#" tabindex="-1" aria-disabled="true">Tallennetut sävellykset</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="#">Logo</a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 2</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 3</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container-fluid">
+    <h3>Brand / Logo</h3>
+    <p>The .navbar-brand class is used to highlight the brand/logo/project name of your page.</p>
+</div>
+<nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+    </div>
+</nav>
+
+
+
+<form class="row g-3" id="loginContainer">
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="loginName">Käyttäjätunnus</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="loginPass">Salasana</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <button type="button" class="btn btn-primary" id="3sointu">Kirjaudu</button>
+</form>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="./components/valinta.js"></script>
+<script src="./controllers/valintaController.js"></script>
+<script src="./models/keyModel.js"></script>
+<script src="./controllers/testi.js"></script>
+
+</body>
+</html>

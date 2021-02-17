@@ -7,23 +7,37 @@
 
     <script src="https://unpkg.com/vexflow/releases/vexflow-debug.js"></script>
     <link rel="stylesheet" href="../css/styles.css"/>
-    <link rel="icon" href="../img/tomusLogo.png">
+    <link rel="icon" href="../img/Tomusäppi_web_icon_FINAL.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
 </head>
 <body>
 
 <!header-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-        <a class="navbar-brand navbar-dark bg-primary" href="../index.html">Tomusäppi</a>
-        <img src="../img/tomusLogo.png" id="headerLogo">
+<div class="container">
 
-        <div class="navbar-dark bg-primary" id="navbarNavAltMarkup">
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand navbar-dark bg-primary" href="../index.html">Tomusäppi BETA</a>
+        <!--                <img src="../img/Tomusäppi_web_icon_FINAL.png" id="headerLogo">-->
+    </div>
+    <div class="container">
+        <div class="navbar-light " id="navbarNavAltMarkup">
             <div class="navbar-nav ">
-                <a class="nav-link active navbar-dark bg-primary" aria-current="page" href="../index.html">Home</a>
-                <a class="nav-link navbar-dark bg-primary" href="home.html">Uusi sävellys</a>
-                <a class="nav-link disabled navbar-dark bg-primary" href="#" tabindex="-1" aria-disabled="true">Tallennetut sävellykset</a>
+                <a class="nav-link active navbar-dark bg-primary" aria-current="page" href="../index.html">
+                    Aloitussivu
+                    <img src="../img/Tomusäppi_icons/koti_icon.png" class="melodiaIcon">
+                </a>
+                <a class="nav-link navbar-dark bg-primary" href="home.html">
+                    Uusi sävellys
+                    <img src="../img/Tomusäppi_icons/uusi_icon.png" class="melodiaIcon">
+                </a>
+                <a class="nav-link navbar-dark bg-primary" href="about.html">
+                    Tietoa meistä
+                    <img src="../img/Tomusäppi_icons/info_icon.png" class="melodiaIcon">
+                </a>
+                <a class="nav-link disabled navbar-dark bg-primary" href="#" tabindex="-1" aria-disabled="true"></a>
             </div>
         </div>
     </div>
@@ -35,182 +49,247 @@
     <div class="container" id="valintaContainer">
         <div class="panel-group col-lg-12 " id="accordion">
 
-            <div class="panel panel-default">
+            <div class="panel panel-default shadow-lg">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a class="default" data-parent="#accordion" href="#collapseDefault">Tyylilajin valinta</a>
+                        <a class="default" data-parent="#accordion" href="#collapseDefault">1/6 Tyylilajin pohdinta</a>
                     </h4>
                 </div>
                 <div id="collapseDefault" class="panel-collapse collapse in">
                     <div class="panel-body">
-                        <p>Valitse sävellyksesi tyylilaji ja klikkaa "Next"</p>
 
                     <div class ="hintValContainer">
+                        <div class="textValContainer">
+                            <p>Tyylilajin valinnan tavoitteena on inspiroitua ja pohtia kokonaiskuvaa siitä, miltä sävellys tulee
+                                kuulostamaan. Tomusäpissä tyylilajin valinta vaikuttaa siihen, että käytämmekö kolmi- vai
+                                nelisointuja.</p>
+                            <p>Pop/Rock, sekä Kamarimusiikkiin kolmisoinnut sopivat mainiosti. Jazz-musiikissa,
+                                sekä brasilialaisessa Bossa Novassa nelisoinnut kuulostavat huomattavasti tutummilta.</p>
 
-                        <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
-                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
 
-                                <div class="btn-group" role="group" aria-label="Basic example">
-                                    <button type="button" class="btn btn-primary" id="jazz">Jazzz</button>
-                                    <button type="button" class="btn btn-primary" id="bossanova">Bossa Nova</button>
-                                    <button type="button" class="btn btn-primary" id="poprock">Pop/Rock</button>
-                                    <button type="button" class="btn btn-primary" id="kamari">Kamarimusiikki</button>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-primary" id="poprock">
+                                            Pop/Rock
+                                            <img src="../img/Tomusäppi_icons/PopRock_icon.png" class="melodiaIcon">
+                                        </button>
+                                        <button type="button" class="btn btn-primary" id="kamari">
+                                            Kamarimusiikki
+                                            <img src="../img/Tomusäppi_icons/Kamarimusiikki_icon.png" class="melodiaIcon">
+                                        </button>
+                                        <button type="button" class="btn btn-primary" id="jazz">
+                                            Jazz
+                                            <img src="../img/Tomusäppi_icons/Jazz_icon.png" class="melodiaIcon">
+                                        </button>
+                                        <button type="button" class="btn btn-primary" id="bossanova">
+                                            Bossa Nova
+                                            <img src="../img/Tomusäppi_icons/Bossanova_icon.png" class="melodiaIcon">
+                                        </button>
+                                    </div>
+
+
                                 </div>
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
 
-
-                            </div>
-                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Joku muu?" aria-label="Joku muu?" aria-describedby="btnGroupAddon" id="jokumuu">
-                                </div>
-                                <div class="btn-group" role="group" aria-label="Basic example">
-                                    <button type="button" class="btn btn-primary" id="3sointu">Kolmisoinnut</button>
-                                    <button type="button" class="btn btn-primary" id="4sointu">Nelisoinnut</button>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Muu tyylilaji, mikä?" aria-label="Joku muu?" aria-describedby="btnGroupAddon" id="jokumuu">
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-primary" id="3sointu">Kolmisoinnut</button>
+                                        <button type="button" class="btn btn-primary" id="4sointu">Nelisoinnut</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                             <div class="slideshow-container" id="hintBox1">
-                                Voit myös halutessasi kirjoittaa tyhjään kentään vapaavalintaisen genren. Se voi olla mitä vain.
-                                Esimerkiksi Tango, Samba, tai R’n’B. Pohdi ja valitse haluatko käyttää kolmi- vai nelisointuja.
+                                <div class="chordHeader">Vinkki</div>
+                                Voit myös halutessasi kirjoittaa tyhjään kenttään vapaavalintaisen genren. Se voi olla
+                                esimerkiksi Tango, Samba, tai R’n’B. Pohdi ja valitse haluatko käyttää kolmi- vai nelisointuja.
                                 Nelisoinnuissa on enemmän väriä, kuin kolmisoinnuissa. Monissa tyylilajeissa kolmisoinnut
                                 kuitenkin kuulostavat nelisointuja tutummilta.
                             </div>
                     </div>
 
-                        <button class="btn btn-success btn-md pull-right" id="defaultNextBtn">Next</button>
+                        <button class="btn btn-success btn-md pull-right" id="defaultNextBtn">Seuraava</button>
                     </div>
                 </div>
             </div> <!-- default -->
 
-            <div class="panel panel-primary">
+            <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a class="primary" data-parent="#accordion" href="#collapsePrimary">Sävellajin valinta</a>
+                        <a class="primary" data-parent="#accordion" href="#collapsePrimary">2/6 Sävellajin valinta</a>
                     </h4>
                 </div>
                 <div id="collapsePrimary" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <p>Valitse sävellyksesi sävellaji ja klikkaa "Next"</p>
 
                         <div class="hintValContainer">
-                            <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <div class="textValContainer">
+                                <p>Sävellaji määrittää kappaleen tonaalisen keskuksen. Valitse haluamasi sävellaji alla olevasta
+                                    valikosta. Käytössäsi on kaikki sävellajit kahteen etumerkkiin asti.</p>
 
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-primary" id="cMajor">C duuri</button>
-                                        <button type="button" class="btn btn-primary" id="aMinor">A molli</button>
+                                <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-primary fatButtons" id="cMajor">C-duuri</button>
+<!--                                            <button type="button" class="btn btn-primary" id="aMinor">a-molli</button>-->
+                                        </div>
+
+                                    </div>
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-primary" id="gMajor">
+                                                G-duuri
+                                                <img src="../img/Tomusäppi_icons/Gmajor_icon.png" class="melodiaIcon">
+                                            </button>
+<!--                                            <button type="button" class="btn btn-primary" id="eMinor">e-molli</button>-->
+                                        </div>
+
+                                    </div>
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-primary fatButtons" id="dMajor">
+                                                D-duuri
+                                                <img src="../img/Tomusäppi_icons/Dmajor_icon.png" class="melodiaIcon">
+                                            </button>
+<!--                                            <button type="button" class="btn btn-primary" id="bMinor">b-molli</button>-->
+                                        </div>
+
+                                    </div>
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-primary fatButtons" id="fMajor">
+                                                F-duuri
+                                                <img src="../img/Tomusäppi_icons/Fmajor_icon.png" class="melodiaIcon">
+                                            </button>
+<!--                                            <button type="button" class="btn btn-primary" id="dMinor">d-molli</button>-->
+                                        </div>
+
+                                    </div>
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-primary fatButtons" id="bbMajor">
+                                                Bb-duuri
+                                                <img src="../img/Tomusäppi_icons/Bflatmajor_icon.png" class="melodiaIcon">
+                                            </button>
+<!--                                            <button type="button" class="btn btn-primary" id="gMinor">g-molli</button>-->
+                                        </div>
+
                                     </div>
 
                                 </div>
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-primary" id="gMajor">G duuri</button>
-                                        <button type="button" class="btn btn-primary" id="eMinor">E molli</button>
-                                    </div>
-
-                                </div>
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-primary" id="dMajor">D duuri</button>
-                                        <button type="button" class="btn btn-primary" id="bMinor">B molli</button>
-                                    </div>
-
-                                </div>
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-primary" id="fMajor">F duuri</button>
-                                        <button type="button" class="btn btn-primary" id="dMinor">D molli</button>
-                                    </div>
-
-                                </div>
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-primary" id="bbMajor">Bb duuri</button>
-                                        <button type="button" class="btn btn-primary" id="gMinor">G molli</button>
-                                    </div>
-
-                                </div>
-
                             </div>
+
                             <div class="slideshow-container" id="hintBox2">
+                                <div class="chordHeader">Vinkki</div>
                                 Jos sävellät ensimmäistä kertaa ja koet, että teoriaosaamisesi on lähtökuopissa, kannattaa
                                 säveltää duurissa.
                             </div>
                         </div>
 
 
-                        <button class="btn btn-warning btn-md pull-left" id="primaryPrevBtn">Prev</button>
-                        <button class="btn btn-success btn-md pull-right" id="primaryNextBtn">Next</button>
+                        <button class="btn btn-warning btn-md pull-left" id="primaryPrevBtn">Edellinen</button>
+                        <button class="btn btn-success btn-md pull-right" id="primaryNextBtn">Seuraava</button>
                     </div>
                 </div>
             </div> <!-- primary -->
 
-            <div class="panel panel-success">
+            <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a class="success" data-parent="#accordion" href="#collapseSuccess">Harmonia</a>
+                        <a class="success" data-parent="#accordion" href="#collapseSuccess">3/6 Harmonian jännitteen hahmottelu</a>
                     </h4>
                 </div>
                 <div id="collapseSuccess" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <p>Valitse alta harmonia ebin</p>
 
                         <div class="hintValContainer">
-                            <div >
-                                <div class="drag-elements droppable multipleChildren hasChild">
-                                    <div id="drag1" class="dragElement blueBorder">Toonika</div>
-                                    <div id="drag2" class="dragElement blueBorder">Subdominantti</div>
-                                    <div id="drag3" class="dragElement blueBorder">Dominantti</div>
+                            <div class="textValContainer">
+                                <p>Määritä jokaisen tahdin harmoninen jännitteisyys <i>"drag’n’droppaamalla"</i>
+                                    alla olevia tehoja tahtien yllä oleviin laatikoihin. Muista, että voit tehdä
+                                    saman valinnan peräkkäin.</p>
+                                <p>Alla olevassa ääninäytteessä on valitsemallesi tyylilajille tyypillinen sointukierto.
+                                    Siitä käy hyvin ilmi harmonian eri tehot</p>
+
+<!--                                <div class="btn-group" role="group" aria-label="Basic example">-->
+                                    <button type="button" class="btn btn-primary" id="sampleButton">
+                                        Kuuntele klikkaamalla tästä
+                                        <img src="../img/Tomusäppi_icons/uusi_speaker_icon.png" class="melodiaIcon">
+                                    </button>
+                                    <button type="button" class="btn btn-primary fatButtons" id="clearHarmButton" onclick="clearHarmZones()">
+                                        Tyhjennä droppaukset
+                                        <img src="../img/Tomusäppi_icons/trashcan_icon.png" class="melodiaIcon">
+                                    </button>
+<!--                                </div>-->
+                                <div >
+                                    <div class="drag-elements droppable multipleChildren hasChild">
+                                        <div id="drag1" class="dragElement blueBorder">Toonika</div>
+                                        <div id="drag2" class="dragElement blueBorder">Subdominantti</div>
+                                        <div id="drag3" class="dragElement blueBorder">Dominantti</div>
+                                    </div>
                                 </div>
                             </div>
 
+
                             <div class="slideshow-container" id="hintBox4">
+                                <div class="chordHeader">Vinkki</div>
                                 Soinnut jaetaan kolmeen kategoriaan jännitteensä mukaan. Ne ovat Toonika, Subdominantti ja
-                                Dominantti. Toonika on ns. kotisointu, jolla ei ole tarvetta purkautua mihinkään. Subdominantilla
+                                Dominantti. Toonika on kotisointu, jolla ei ole tarvetta purkautua mihinkään. Subdominantilla
                                 on hieman liikettä havaittavissa. Dominantti kaipaa purkausta. Toonikan ja subdominantin jälkeen
                                 voi tulla mitä vain. Usein dominanttia seuraa Toonika. Useimmiten musiikki loppuu toonikaan.
                             </div>
                         </div>
 
-                        <button class="btn btn-warning btn-md pull-left" id="successPrevBtn">Prev</button>
-                        <button class="btn btn-success btn-md pull-right" id="successNextBtn">Next</button>
+                        <button class="btn btn-warning btn-md pull-left" id="successPrevBtn">Edellinen</button>
+                        <button class="btn btn-success btn-md pull-right" id="successNextBtn">Seuraava</button>
                         </div>
 
 
                     </div>
                 </div>
-            <div class="panel panel-info">
+            <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a class="info" data-parent="#accordion" href="#collapseInfo">Sointukierto</a>
+                        <a class="info" data-parent="#accordion" href="#collapseInfo">4/6 Sointukierron luonti</a>
                     </h4>
                 </div>
                 <div id="collapseInfo" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <p>Valikoi sävellyksellesi sointukierto alta</p>
 
                        <div class="hintValContainer">
-                           <div class="example-parent">
-                               <div class="drag-elements droppable multipleChildren hasChild chordBox" id="tonChordContainer">
-                                   <div class="chordHeader">Toonika</div>
+                           <div class="textValContainer">
+                               <p>Määritä jokaiselle tahdille sointumerkki "drag’n’droppaamalla" edellisen vaiheen valintojen mukaan.</p>
 
-                               </div>
-                               <div class="drag-elements droppable multipleChildren hasChild chordBox" id="subdomChordContainer">
-                                   <div class="chordHeader">Subdominantti</div>
+                               <button type="button" class="btn btn-primary" id="clearChordsButton" onclick="clearChordZones()">
+                                   Tyhjennä droppaukset
+                                   <img src="../img/Tomusäppi_icons/trashcan_icon.png" class="melodiaIcon">
+                               </button>
+                               <div class="example-parent">
+                                   <div class="drag-elements droppable multipleChildren hasChild chordBox" id="tonChordContainer">
+                                       <div class="chordHeader">Toonika</div>
 
-                               </div>
-                               <div class="drag-elements droppable multipleChildren hasChild chordBox" id="domChordContainer">
-                                   <div class="chordHeader">Dominantti</div>
+                                   </div>
+                                   <div class="drag-elements droppable multipleChildren hasChild chordBox" id="subdomChordContainer">
+                                       <div class="chordHeader">Subdominantti</div>
 
+                                   </div>
+                                   <div class="drag-elements droppable multipleChildren hasChild chordBox" id="domChordContainer">
+                                       <div class="chordHeader">Dominantti</div>
+
+                                   </div>
                                </div>
                            </div>
+
                            <div class="slideshow-container">
+                               <div class="chordHeader">Vinkki</div>
                                <div class="mySlides2" id="hintBox3a"></div>
 
                                <div class="mySlides2" id="hintBox3b"></div>
@@ -222,35 +301,74 @@
                            </div>
                        </div>
 
-                        <button class="btn btn-warning btn-md pull-left" id="infoPrevBtn">Prev</button>
-                        <button class="btn btn-success btn-md pull-right" id="infoNextBtn" >Next</button>
+                        <button class="btn btn-warning btn-md pull-left" id="infoPrevBtn">Edellinen</button>
+                        <button class="btn btn-success btn-md pull-right" id="infoNextBtn" >Seuraava</button>
                     </div>
                 </div>
             </div> <!-- info -->
 
-            <div class="panel panel-warning">
+            <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a class="danger" data-parent="#accordion" href="#collapseWarning">Melodian kirjoitus</a>
+                        <a class="danger" data-parent="#accordion" href="#collapseWarning">5/6 Melodian kirjoitus</a>
                     </h4>
                 </div>
                 <div id="collapseWarning" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <p>Alla näkyviä komentoja käyttäen, kirjoita melodiasi viivastolle.</p>
-                        <p id="inputInfo"></p>
-
-                        <div id="writeWNoteButton" type="button" class="btn btn-primary input-button" >Kokonuotti 𝅝</div>
-                        <div id="writeHNoteButton" onclick="" type="button" class="btn btn-primary" >Puolinuotti 𝅗𝅥</div>
-                        <div id="writeQNoteButton" onclick="" type="button" class="btn btn-primary" >Neljäsosanuotti 𝅘𝅥</div>
-                        <div id="eraseNoteButton" onclick="" type="button" class="btn btn-primary" >Erase</div>
-                        <div id="noteUndoButton" onclick="" type="button" class="btn btn-primary" >Undo</div>
-<!--                        <div id="toLeftButton" type="button" class="btn btn-primary">Left (soon)</div>-->
-<!--                        <div id="toRightButton" type="button" class="btn btn-primary">Right (soon)</div>-->
-                        <div id="toUpButton" type="button" class="btn btn-primary">Up</div>
-                        <div id="toDownButton" type="button" class="btn btn-primary">Down</div>
 
                         <div class="hintValContainer">
+                            <div class="textValContainer">
+                                <p>Nyt on aika luoda melodia. Käytettävissäsi on neljäsosa-, puoli-, sekä kokonuotit.
+                                    Alla olevia aika-arvoja klikkaamalla lisäät nuotteja viivastolle.
+                                    Sävelkorkeus määritetään nuolilla.</p>
+
+                                <p id="inputInfo"></p>
+
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <div id="writeWNoteButton" type="button" class="btn btn-primary input-button" >Kokonuotti
+                                        <img src="../img/Tomusäppi_icons/kokonuotti.png" class="melodiaIcon">
+                                    </div>
+                                    <div id="writeHNoteButton" onclick="" type="button" class="btn btn-primary" >Puolinuotti
+                                        <img src="../img/Tomusäppi_icons/puolinuotti.png" class="melodiaIcon">
+                                    </div>
+                                    <div id="writeQNoteButton" onclick="" type="button" class="btn btn-primary" >Neljäsosanuotti
+                                        <img src="../img/Tomusäppi_icons/neljäsosanuotti.png" class="melodiaIcon">
+                                    </div>
+                                </div>
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <div id="writeWRNoteButton" type="button" class="btn btn-primary input-button" >Kokotauko
+                                        <img src="../img/Tomusäppi_icons/kokotauko.png" class="melodiaIcon">
+                                    </div>
+                                    <div id="writeHRNoteButton" onclick="" type="button" class="btn btn-primary" >Puolitauko
+                                        <img src="../img/Tomusäppi_icons/puolitauko.png" class="melodiaIcon">
+                                    </div>
+                                    <div id="writeQrNoteButton" onclick="" type="button" class="btn btn-primary" >Neljäsosatauko
+                                        <img src="../img/Tomusäppi_icons/neljäsosatauko.png" class="melodiaIcon">
+                                    </div>
+                                </div>
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <div id="eraseNoteButton" onclick="" type="button" class="btn btn-primary fatButtons" >
+                                        Tyhjennä viivasto
+                                        <img src="../img/Tomusäppi_icons/trashcan_icon.png" class="melodiaIcon">
+                                    </div>
+                                    <div id="noteUndoButton" onclick="" type="button" class="btn btn-primary fatButtons" >
+                                        Kumoa viimeisin
+                                        <img src="../img/Tomusäppi_icons/backspace_icon.png" class="melodiaIcon">
+                                    </div>
+                                </div>
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <div id="toUpButton" type="button" class="btn btn-primary">
+                                        <img src="../img/Tomusäppi_icons/ylös.png" class="melodiaIcon">
+                                    </div>
+                                    <div id="toDownButton" type="button" class="btn btn-primary">
+                                        <img src="../img/Tomusäppi_icons/alas.png" class="melodiaIcon">
+                                    </div>
+                                </div>
+
+                            </div>
+
                             <div class="slideshow-container">
+                                <div class="chordHeader">Vinkki</div>
                                 <div class="mySlides1" id="hintBox5a">
 
                                 </div>
@@ -268,28 +386,40 @@
                             </div>
                         </div>
 
-                        <button class="btn btn-warning btn-md pull-left" id="warningPrevBtn">Prev</button>
-                        <button class="btn btn-success btn-md pull-right" id="warningNextBtn">Next</button>
+                        <button class="btn btn-warning btn-md pull-left" id="warningPrevBtn">Edellinen</button>
+                        <button class="btn btn-success btn-md pull-right" id="warningNextBtn">Seuraava</button>
                     </div>
                 </div>
             </div> <!-- warning -->
-            <div class="panel panel-danger">
+            <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a data-parent="accordion" href="#collapseDanger">Viimeistely ja esikatselu</a>
+                        <a data-parent="accordion" href="#collapseDanger">6/6 Viimeistely ja esikatselu</a>
                     </h4>
                 </div>
                 <div id="collapseDanger" class="panel=collapse collapse">
                     <div class="panel-body">
-                        <p>Hello I am the panel body</p>
+                        <div class="hintValContainer">
+                            <div class="textValContainer">
+                                <p>Tonaalinen sävellyksesi on valmis soitettavaksi yksin tai yhtyeen kanssa! Enää on jäljellä
+                                    kappaleen nimeäminen.</p>
 
-                        <div class="slideshow-container" id="hintBox12">
-                            Pohdi minkälaisia huomioita teit säveltäessä. Aiotko säveltää lisää? Aiotko seuraavalla kerralla
-                            kokeilla jotain aivan muuta? Muista kokeilla myös atonaalista tai modaalista säveltämistä!
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Sävellyksen nimi?" aria-label="Sävellyksen nimi?" aria-describedby="btnGroupAddon" id="savelluksenNimi">
+                                    <input type="text" class="form-control" placeholder="Säveltäjän nimi?" aria-label="Säveltäjän nimi?" aria-describedby="btnGroupAddon" id="saveltajanNimi">
+                                </div>
+                            </div>
+                            <div class="slideshow-container" id="hintBox12">
+                                <div class="chordHeader">Vinkki</div>
+                                Pohdi minkälaisia huomioita teit säveltäessä. Aiotko säveltää lisää? Aiotko seuraavalla kerralla
+                                kokeilla jotain aivan muuta? Muista kokeilla myös atonaalista tai modaalista säveltämistä!
+                            </div>
                         </div>
 
-                        <button class="btn btn-warning btn-md pull-left" id="dangerPrevBtn">Prev</button>
-                        <button class="btn btn-danger btn-md pull-right">Submit</button>
+                        <button class="btn btn-warning btn-md pull-left" id="dangerPrevBtn">Edellinen</button>
+                        <button class="btn btn-success btn-md pull-right" onclick="printsavellus();$('#printContainer').print();" id="saveButton">Tulosta</button>
+<!--                        <button class="btn btn-danger btn-md pull-right" onclick="" id="b">Tulosta 2</button>-->
+<!--                        onclick="printsavellus();$('#printContainer').print();"-->
                     </div>
                 </div>
             </div> <!-- danger -->
@@ -302,24 +432,25 @@
 
     </div>
     <!nuottiviivasto-->
-<div id="alaContainer" >
+<div id="alaContainer" class="container" >
+    <p id="tyylilajinEsittely"></p>
     <div id="dropzoneContainer1" class="dropzone-container ">
         <div class="drop-elements">
             <div class="tahtiContainer">
-                <div class="dropElement-chord droppable hideSointuContainer"></div>
-                <div class="dropElement-harm droppable hideHarmoniaContainer"></div>
+                <div class="dropElement-chord droppable hideSointuContainer" id="sCont1"></div>
+                <div class="dropElement-harm droppable hideHarmoniaContainer" id="hCont1"></div>
             </div>
             <div class="tahtiContainer">
-                <div class="dropElement-chord droppable hideSointuContainer"></div>
-                <div class="dropElement-harm droppable hideHarmoniaContainer"></div>
+                <div class="dropElement-chord droppable hideSointuContainer" id="sCont2"></div>
+                <div class="dropElement-harm droppable hideHarmoniaContainer" id="hCont2"></div>
             </div>
             <div class="tahtiContainer">
-                <div class="dropElement-chord droppable hideSointuContainer"></div>
-                <div class="dropElement-harm droppable hideHarmoniaContainer"></div>
+                <div class="dropElement-chord droppable hideSointuContainer" id="sCont3"></div>
+                <div class="dropElement-harm droppable hideHarmoniaContainer" id="hCont3"></div>
             </div>
             <div class="tahtiContainer">
-                <div class="dropElement-chord droppable hideSointuContainer"></div>
-                <div class="dropElement-harm droppable hideHarmoniaContainer"></div>
+                <div class="dropElement-chord droppable hideSointuContainer" id="sCont4"></div>
+                <div class="dropElement-harm droppable hideHarmoniaContainer" id="hCont4"></div>
             </div>
         </div>
     </div>
@@ -343,26 +474,26 @@
 <!--        </div>-->
 <!--    </div>-->
 
-    <div id="dropzoneContainer2" class="dropzone-container ">
-        <div class="drop-elements">
-            <div class="tahtiContainer">
-                <div class="dropElement-chord droppable hideSointuContainer"></div>
-                <div class="dropElement-harm droppable hideHarmoniaContainer"></div>
-            </div>
-            <div class="tahtiContainer">
-                <div class="dropElement-chord droppable hideSointuContainer"></div>
-                <div class="dropElement-harm droppable hideHarmoniaContainer"></div>
-            </div>
-            <div class="tahtiContainer">
-                <div class="dropElement-chord droppable hideSointuContainer"></div>
-                <div class="dropElement-harm droppable hideHarmoniaContainer"></div>
-            </div>
-            <div class="tahtiContainer">
-                <div class="dropElement-chord droppable hideSointuContainer"></div>
-                <div class="dropElement-harm droppable hideHarmoniaContainer"></div>
-            </div>
-        </div>
-    </div>
+<!--    <div id="dropzoneContainer2" class="dropzone-container ">-->
+<!--        <div class="drop-elements">-->
+<!--            <div class="tahtiContainer">-->
+<!--                <div class="dropElement-chord droppable hideSointuContainer"></div>-->
+<!--                <div class="dropElement-harm droppable hideHarmoniaContainer"></div>-->
+<!--            </div>-->
+<!--            <div class="tahtiContainer">-->
+<!--                <div class="dropElement-chord droppable hideSointuContainer"></div>-->
+<!--                <div class="dropElement-harm droppable hideHarmoniaContainer"></div>-->
+<!--            </div>-->
+<!--            <div class="tahtiContainer">-->
+<!--                <div class="dropElement-chord droppable hideSointuContainer"></div>-->
+<!--                <div class="dropElement-harm droppable hideHarmoniaContainer"></div>-->
+<!--            </div>-->
+<!--            <div class="tahtiContainer">-->
+<!--                <div class="dropElement-chord droppable hideSointuContainer"></div>-->
+<!--                <div class="dropElement-harm droppable hideHarmoniaContainer"></div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
     <div class="viivastoContainer">
         <div id="stave2"></div>
     </div>
@@ -378,6 +509,21 @@
     <div id="container"></div>
 
 </div>
+<div id="printContainer">
+    <div id="printTextContainer">
+        <p id="tyylilajinEsittely2"></p>
+        <p id="savelluksenEsittely"></p>
+        <p id="saveltajanEsittely"></p>
+    </div>
+    <canvas id=c></canvas>
+    <div id="printti"></div>
+</div>
+
+<footer>
+    <div>
+        <small>Copyright &copy; Jussi & Otto 2021</small>
+    </div>
+</footer>
 
 <!--<script src="../vex.js"></script>-->
 
@@ -386,12 +532,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!--<script src="http://html2canvas.hertzen.com/dist/html2canvas.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.0/jspdf.umd.min.js" integrity="sha512-GctVjwNNH1cjfoaMyi3WTXq/Y+NDpQ2q+tVPGtNNCgmKiokNiWR68MMYbgaCLg5IgHgZ3dM8EVcmRpJVBLkaiA==" crossorigin="anonymous"></script>
 <script src="../components/valinta.js"></script>
 <script src="../controllers/valintaController.js"></script>
 <script src="../vex2.js"></script>
 <script src="../models/keyModel.js"></script>
 <script src="../models/hintModel.js"></script>
 <script src="../controllers/testi.js"></script>
+
 
 
 

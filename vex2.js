@@ -139,12 +139,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // }
         if (totalCurrentDuration + currentNoteDurationInSixteenth > 64) {
             document.getElementsByClassName('inputInfo').innerHTML = "The stave is full!";
-            alert("Tämä sointu ei mahdu enää viivastolle!");
+            alert("Tämä aika-arvo ei mahdu enää viivastolle");
             return false;
         }
         if (currentMeasureLeft < currentNoteDurationInSixteenth) {
             document.getElementsByClassName('inputInfo').innerHTML = "The bar/measure is full!";
-            alert("Tämä sointu ei mahdu enää tähän tahtiin!");
+            alert("Tämä aika-arvo ei mahdu enää tähän tahtiin");
             return false;
         }
 
@@ -157,6 +157,23 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             // durationForVex = "q";
             currentMeasureLeft -= 4;
+        }
+
+        if (inputPitch === "-") {
+
+        }
+
+
+        if (kerrosInQuestion === 0) {
+
+
+
+
+        } else {
+
+
+
+
         }
 
         // Add note to the array
@@ -176,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
         totalCurrentDuration = currentDuration;
         console.log("notesString: "+notesString);
 
-
+        // Add notes to staff
         renderNotes.push(noteString+durationForVex);
 
         console.log("noteString: "+noteString);
@@ -197,23 +214,8 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("restsArray: "+restsArray);
         console.log("renderAll: "+renderAll);
 
-        //var paskakusihomo = ["a/4B", "b/4B",];  //"a/4B","-","b/4B","c/4#","e/4B","-","d/4B","d/4#","a/4B","-","b/4B","c/4#","e/4B","-","d/4B","d/4#"
-        paskakusihomo.push(notesString);
-
-        //console.log(paskakusihomo);
-        //console.log(notes);
-        // Add notes to staff
-        //drawStaff(renderNotes);
-        //getAllMeasures("C", 4, "h", "1");
 
         vexifunk(renderAll, juuh, kerrosInQuestion);
-
-        // If motiv equals the allowed duration, disable more input
-        if (totalCurrentDuration === 32) {
-            //document.getElementById('input-submit').disabled = true;
-            //document.getElementById('input-info').innerHTML = "You can't add more notes to your motif";
-        }
-
 
     }
 
@@ -223,19 +225,38 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     //"w", "C", 4   "1", "c", 4
 
-    //puolinuotin klsdfkfk
+    //puolinuotin kutsuminen
     document.getElementById('writeHNoteButton').onclick = () => {
         kusifunk("2", "b", 4);
     };
+
     //neljäsosanuotin kutsuminen
     document.getElementById('writeQNoteButton').onclick = () => {
         kusifunk("4", "b", 4);
     };
+
+    //kokotauon kutsuminen
+    document.getElementById('writeWRNoteButton').onclick = () => {
+        kusifunk("1", "-", 4);
+    };
+    //"w", "C", 4   "1", "c", 4
+
+    //puolitauon kutsuminen
+    document.getElementById('writeHRNoteButton').onclick = () => {
+        kusifunk("2", "-", 4);
+    };
+
+    //neljäsosatauon kutsuminen
+    document.getElementById('writeQrNoteButton').onclick = () => {
+        kusifunk("4", "-", 4);
+    };
+
     //viimeisimmän nuotin siirto ylöspäin
     document.getElementById('toUpButton').onclick = () => {
         //kusifunk("4", "c", 4);
         modifyLastNote(1);
     };
+
     //viimeisimmän nuotin siirto ylöspäin
     document.getElementById('toDownButton').onclick = () => {
         //kusifunk("4", "c", 4);
@@ -268,6 +289,10 @@ function modifyLastNote(suunta) {
         totalCurrentDuration -= 4;
     } else {
         console.log("weirdos")
+    }
+
+    if (latestnotePitch === "-/4") {
+        alert("Et voi muuttaa taukojen sävelkorkeutta");
     }
 
     let korko;
@@ -346,6 +371,10 @@ function modifyLastNote(suunta) {
                 korko = "c";
                 taavi = 6;
                 break;
+            case "-/4":
+                korko = "-";
+                taavi = 4;
+                break;
 
         }
     } else if (suunta === 2) {
@@ -419,6 +448,10 @@ function modifyLastNote(suunta) {
             case "c/6":
                 korko = "b";
                 taavi = 5;
+                break;
+            case "-/4":
+                korko = "-";
+                taavi = 4;
                 break;
 
         }
@@ -815,9 +848,9 @@ function vexifunk(notesArray, selectedKey, kerros) {
     div = document.getElementById("stave");
     div.innerHTML = "";
     renderer = new VF.Renderer(div, VF.Renderer.Backends.SVG);
-    renderer.resize(1150, 200);
+    renderer.resize(1150, 109);
     context = renderer.getContext();
-    stave = new VF.Stave(10, 40, 1200);
+    stave = new VF.Stave(10, -5, 1200);
     stave.addClef("treble").addTimeSignature("4/4").addKeySignature(selectedKey);
     stave.setContext(context).draw();
 
@@ -845,7 +878,19 @@ function vexifunk(notesArray, selectedKey, kerros) {
 
             myNames.push(new VF.StaveNote({keys: ["B/4"], duration: "qr" }));
 
-        } else if (names[i].indexOf("#") >= 0) {
+        } else if (names[i].substring(0,5) === "-/4/4") {
+
+            myNames.push(new VF.StaveNote({keys: ["B/4"], duration: "qr"}));
+
+        } else if (names[i].substring(0,5) === "-/4/2") {
+
+            myNames.push(new VF.StaveNote({keys: ["B/4"], duration: "hr"}));
+
+        } else if (names[i].substring(0,5) === "-/4/1") {
+
+            myNames.push(new VF.StaveNote({keys: ["D/5"], duration: "wr"}));
+
+        }else if (names[i].indexOf("#") >= 0) {
 
             myNames.push(new VF.StaveNote({keys: [names[i].substring(0,3)], duration: "q" }).addAccidental(0, new VF.Accidental("#")));
 
@@ -881,9 +926,9 @@ function vexifunk(notesArray, selectedKey, kerros) {
     div2 = document.getElementById("stave2");
     div2.innerHTML = "";
     renderer2 = new VF.Renderer(div2, VF.Renderer.Backends.SVG);
-    renderer2.resize(1150, 200);
+    renderer2.resize(1150, 109);
     context2 = renderer2.getContext();
-    stave2 = new VF.Stave(10, 40, 1200);
+    stave2 = new VF.Stave(10, -5, 1200);
     stave2.addClef("treble").addKeySignature(selectedKey);
     //stave2.setContext(context2).draw();
 
@@ -909,6 +954,9 @@ function vexifunk(notesArray, selectedKey, kerros) {
 
             myNames2.push(new VF.StaveNote({keys: ["B/4"], duration: "qr" }));
 
+        } else if (names2[x].substring(0,4)) {
+
+            myNames2.push(new VF.StaveNote({keys: ["B/4"], duration: "qr" }));
         } else if (names2[x].indexOf("#") >= 0) {
 
             myNames2.push(new VF.StaveNote({keys: [names2[x].substring(0,3)], duration: "q" }).addAccidental(0, new VF.Accidental("#")));

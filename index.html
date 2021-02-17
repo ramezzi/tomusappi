@@ -4,20 +4,33 @@
     <meta charset="UTF-8">
     <title>Home</title>
     <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="icon" href="img/Tomusäppi_web_icon_FINAL.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-        <a class="navbar-brand navbar-dark bg-primary" href="index.html">Tomusäppi</a>
-
-        <div class="navbar-dark bg-primary" id="navbarNavAltMarkup">
+    <div class="container">
+        <a class="navbar-brand navbar-dark bg-primary" href="index.html">Tomusäppi BETA</a>
+        <!--                <img src="../img/Tomusäppi_web_icon_FINAL.png" id="headerLogo">-->
+    </div>
+    <div class="container">
+        <div class="navbar-light " id="navbarNavAltMarkup">
             <div class="navbar-nav ">
-                <a class="nav-link active navbar-dark bg-primary" aria-current="page" href="index.html">Home</a>
-                <a class="nav-link navbar-dark bg-primary" href="views/home.html">Uusi sävellys</a>
-                <a class="nav-link disabled navbar-dark bg-primary" href="#" tabindex="-1" aria-disabled="true">Tallennetut sävellykset</a>
+                <a class="nav-link active navbar-dark bg-primary" aria-current="page" href="index.html">
+                    Aloitussivu
+                    <img src="img/Tomusäppi_icons/koti_icon.png" class="melodiaIcon">
+                </a>
+                <a class="nav-link navbar-dark bg-primary" href="views/home.html">
+                    Uusi sävellys
+                    <img src="img/Tomusäppi_icons/uusi_icon.png" class="melodiaIcon">
+                </a>
+                <a class="nav-link navbar-dark bg-primary" href="views/about.html">
+                    Tietoa meistä
+                    <img src="img/Tomusäppi_icons/info_icon.png" class="melodiaIcon">
+                </a>
+                <a class="nav-link disabled navbar-dark bg-primary" href="#" tabindex="-1" aria-disabled="true"></a>
             </div>
         </div>
     </div>
@@ -26,15 +39,25 @@
 <!--<div class="navbar-dark bg-primary" id="jatkaButton">-->
 <!--    <a href="views/home.html" class="nav-link active navbar-dark bg-primary">Jatka rekisteröitymättä</a>-->
 <!--</div>-->
-
-<div class="navbar-brand" id="loginContainer">
-    <div class="navbar-dark bg-primary" id="jatkaButton">
-        <a href="views/home.html" class="nav-link active navbar-dark bg-primary">Jatka rekisteröitymättä</a>
+<div id="bigNameDiv">
+    <div>
+        <strong>Tomusäppi</strong>
+        <p>Tonaalisen musiikin sävellysaplikaatio</p>
     </div>
-    <div data-netlify-identity-menu></div>
+</div>
+<div class="" id="loginContainer">
+<!--    <div class="navbar-dark rekisteroitumatta" id="jatkaButton">-->
+        <a href="views/home.html" class="active rekisteroitumatta" id="rekisteroitumattaButton">Jatka rekisteröitymättä</a>
 
+<!--    </div>-->
+<!--    <div data-netlify-identity-menu></div>-->
 </div>
 
+<footer>
+    <div>
+        <small>Copyright &copy; Jussi & Otto 2021</small>
+    </div>
+</footer>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

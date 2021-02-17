@@ -6,6 +6,11 @@
     flex-direction: column;
 }
 
+body {
+    /*background: rgb(255,255,255);*/
+    /*background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(231,231,231,1) 36%, rgba(255,255,255,1) 99%);*/
+}
+
 .img-thumbnail {
     height: 100px;
     width: 100px;
@@ -13,6 +18,10 @@
 
 .viivastoContainer {
 
+}
+
+.panel {
+    box-shadow: 2px 4px 4px #888888;
 }
 
 #div1 {
@@ -58,12 +67,17 @@
 }
 
 .dropzone-container {
-    margin-left: 10px;
+    margin-left: 5px;
     width: 1200px;
+    height: 45px;
 }
 
 #alaContainer {
-    padding-left: 20%;
+    /*padding-left: 20%;*/
+    background: #ffffff;
+    padding-right: 20px;
+    border-radius: 4px;
+    border: solid 1px #ddd;
 }
 
 .hideAlaContainer {
@@ -111,8 +125,6 @@ header img.html5-logo{display:block;float:left;width:100px;}
 .instructions a{font-weight:bold;color:#008080;}
 
 .drop-elements{
-    margin: 0 0 0px;
-    padding:0px 0;
     overflow: auto;
     display: flex;
     flex-direction: row;
@@ -125,7 +137,9 @@ header img.html5-logo{display:block;float:left;width:100px;}
     margin-right:10px;
     height:40px;
     padding:0%;
-    background-color:#bce8f1;
+    background-color:#337ab7;
+    border-radius: 4px;
+    border: solid 1px #ddd;
 }
 
 .dropElement-harm {
@@ -134,14 +148,17 @@ header img.html5-logo{display:block;float:left;width:100px;}
     margin-right:10px;
     height:40px;
     padding:0%;
-    background-color:#bce8f1;
+    background-color:#337ab7;
+    border-radius: 4px;
+    border: solid 1px #ddd;
+    line-height: 40px;
 }
 
 .dropped{}
 
 .dropElement:last-child{margin-right:0;}
 
-.drag-elements{padding-top:0px;overflow: visible;text-align: start;}
+.drag-elements{padding-top:15px;overflow: visible;text-align: start;}
 
 .dropElement,.drag-elements,.dragElement{border-radius:5px;}
 
@@ -151,6 +168,7 @@ header img.html5-logo{display:block;float:left;width:100px;}
     height:40px;
     color:black;
     font-weight:bold;
+    font-size: 14px;
     text-align: center;
     line-height: 40px;
 }
@@ -159,12 +177,16 @@ header img.html5-logo{display:block;float:left;width:100px;}
 
 .drag-elements .dragElement:last-child{margin-right:0;}
 
-.dragElement:hover{cursor: pointer;
+.dragElement:hover{
+    cursor: pointer;
 }
 
 
-.dragEnter{background-color:#33A0A0;}
-.hasChild{background-color:#ffffff}
+.dragEnter{}
+.hasChild{
+    background-color:#ffffff;
+    border: 0;
+}
 
 .blueBorder{border-color: black;}
 
@@ -172,10 +194,14 @@ header img.html5-logo{display:block;float:left;width:100px;}
 
 .copyright, .copyright a{font-weight:bold;color:#008080;}
 
-.chordBox{height:160px;border:4px solid #ccc;border-radius:5px;display: flex; flex-direction: column}
+.chordBox{height:160px;display: flex; flex-direction: column}
 
 .tensionBox{height:60px;}
-.chordHeader{text-align: center;}
+.chordHeader{
+    text-align: center;
+    font-weight: bold;
+    padding-right: 10px;
+}
 
 .chordDraggable{
     display:inline-block;
@@ -190,7 +216,15 @@ header img.html5-logo{display:block;float:left;width:100px;}
 }
 
 #writeNoteButton{height: 50px; width: 50px; background-color: #337ab7}
-#loginContainer{display: flex; align-content: center; flex-direction: column; margin-left: 20%;}
+
+#loginContainer{
+    display: flex;
+    /*align-content: center;*/
+    /*flex-direction: column;*/
+    /*margin-left: 20%;*/
+    justify-content: center;
+}
+
 #kirjauduButton{margin-top: 16px}
 #rekisteröidyButton{margin-top: 16px}
 #loginPassConfirmHide{visibility: hidden}
@@ -217,7 +251,7 @@ header img.html5-logo{display:block;float:left;width:100px;}
 
 .slideshow-container{
     display: flex;
-    background-color: #4AAE9B;
+    /*background-color: #f5f5f5;*/
     width: 400px;
     margin: 15px;
     padding: 15px;
@@ -225,7 +259,7 @@ header img.html5-logo{display:block;float:left;width:100px;}
 
 .plain-hint-container{
     display: flex;
-    background-color: #4AAE9B;
+    background-color: #f5f5f5;
     width: 400px;
     margin: 15px;
     padding: 15px;
@@ -234,13 +268,44 @@ header img.html5-logo{display:block;float:left;width:100px;}
 .hintValContainer{
     display: flex;
     flex-direction: row;
+    margin: 15px;
 }
 
 /* Slideshow container */
 .slideshow-container {
+    background-color: #f5f5f5;
     max-width: 1000px;
     position: relative;
-    margin: auto;
+    /*margin: auto;*/
+    border-radius: 4px;
+    border: solid 1px #337ab7;
+    margin-bottom: 15px ;
+}
+
+#hintBoxtest1 {
+    background-color: #f5f5f5;
+    max-width: 1000px;
+    position: relative;
+    border-radius: 4px;
+    border: solid 1px #ddd;
+}
+#hintBoxtest2 {
+
+}
+#hintBoxtest3 {
+    background-color: #0dcaf0;
+    max-width: 1000px;
+    position: relative;
+    border-radius: 4px;
+    border: solid 1px #ddd;
+}
+
+#hintBoxtest4 {
+    background-color: #a370f7;
+    max-width: 1000px;
+    position: relative;
+    border-radius: 4px;
+    border: solid 1px #ddd;
 }
 
 /* Next & previous buttons */
@@ -257,6 +322,7 @@ header img.html5-logo{display:block;float:left;width:100px;}
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    text-decoration: none;
 }
 
 /* Position the "next button" to the right */
@@ -266,10 +332,10 @@ header img.html5-logo{display:block;float:left;width:100px;}
 }
 
 /* On hover, add a grey background color */
-.prev:hover, .next:hover {
-    background-color: #f1f1f1;
-    color: black;
-}
+/*.prev:hover, .next:hover {*/
+/*    background-color: #f1f1f1;*/
+/*    color: black;*/
+/*}*/
 
 #headerLogo{
     width: 50px;
@@ -278,16 +344,255 @@ header img.html5-logo{display:block;float:left;width:100px;}
 
 .tahtiContainer {
     margin-right: 30px;
+
 }
 
-#jatkaButton {
+/*#jatkaButton {*/
+/*    width: 500px;*/
+/*    height: 100px;*/
+/*    background-color: #337ab7;*/
+/*    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+/*    font-size: 25px;*/
+/*    text-align: center;*/
+/*    margin-top: 16px;*/
+/*    line-height: 70px;*/
+/*    border-radius: 4px;*/
+/*    border: solid 1px #ddd;*/
+/*}*/
+/*#jatkaButton:hover {*/
+/*    background-color: #ffffff;*/
+/*    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+/*    font-size: 25px;*/
+/*    text-align: center;*/
+/*    margin-top: 16px;*/
+/*    line-height: 70px;*/
+/*    border-radius: 4px;*/
+/*    border: solid 2px #337ab7;*/
+/*}*/
+
+#rekisteroitumattaButton {
     width: 500px;
     height: 100px;
-    background-color: #337ab7;
+    /*background-color: #337ab7;*/
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 25px;
     text-align: center;
-    border: 2px solid black;
     margin-top: 16px;
-    line-height: 70px;
+    line-height: 95px;
+    border-radius: 4px;
+    border: solid 1px #ddd;
+    text-decoration: none;
+    /*justify-content: center;*/
 }
+
+#bigNameDiv {
+    height: 400px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    /*border-radius: 4px;*/
+    /*border-bottom: solid 1px #ddd;*/
+    /*border-right: solid 1px #ddd;*/
+    /*border-left: solid 1px #ddd;*/
+    text-decoration: none;
+    background-color: #ffffff;
+    /*box-shadow: 0px 1px 1px #aaaaaa;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+strong {
+    font-size: 50px;
+}
+
+.rekisteroitumatta {
+    color: #ffffff;
+    background-color: #337ab7;
+    border-radius: 4px;
+
+}
+.rekisteroitumatta:hover {
+    color: #337ab7;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #ffffff;
+}
+
+#toDownButton, #toUpButton {
+    /*font-size: 18px;*/
+    font-weight: bold;
+}
+
+.textValContainer {
+    width: 50%;
+    margin: 15px;
+}
+
+#navbarNavAltMarkup {
+    line-height: 50px;
+}
+
+.mySlides1 {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.mySlides2 {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#jokumuu {
+    width: 160px;
+}
+
+.btn-group {
+    padding-bottom: 5px;
+}
+.input-group {
+    padding-bottom: 5px;
+}
+
+#tyylilajinEsittely {
+    font-size: 18px;
+    padding-top: 2px;
+}
+
+#printContainer {
+    visibility: hidden;
+}
+
+#printTextContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.seuraavaC {
+    background-color: #33B78A;
+}
+
+/*@media only screen and (max-width: 1000px) {*/
+/*    #alaContainer {*/
+/*        padding-left: 2%;*/
+/*    }*/
+/*}*/
+/*@media only screen and (max-width: 1600px) {*/
+/*    #alaContainer {*/
+/*        padding-left: 10%;*/
+/*    }*/
+/*}*/
+/*!*@media only screen and (max-width: 1600px) {*!*/
+/*!*    #alaContainer {*!*/
+/*!*        padding-left: 7%;*!*/
+/*!*    }*!*/
+/*!*}*!*/
+/*@media only screen and (max-width: 2000px) {*/
+/*    #alaContainer {*/
+/*        padding-left: 17%;*/
+/*    }*/
+/*}*/
+
+.melodiaIcon {
+    height: 30px;
+    width: 30px;
+}
+
+.fatButtons {
+    height: 44px;
+}
+
+#clearChordsButton {
+    margin-bottom: 15px;
+}
+
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.aboutPageContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.aboutPersonContainer {
+    display: flex;
+    justify-content: space-between;
+    /*flex-direction: column;*/
+    /*background-color: #f5f5f5;*/
+    width: 400px;
+    height: 217px;
+    margin: 15px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    max-width: 1000px;
+    position: relative;
+    /*margin: auto;*/
+    border-radius: 4px;
+    border: solid 1px #ddd;
+    /*box-shadow: 5px 5px 3px #aaaaaa;*/
+    box-shadow: 0px 1px 1px #aaaaaa;
+}
+
+.aboutBoxContainer {
+    display: flex;
+    flex-direction: column;
+    /*background-color: #f5f5f5;*/
+    width: 400px;
+    height: 400px;
+    margin: 15px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    max-width: 1000px;
+    position: relative;
+    /*margin: auto;*/
+    border-radius: 4px;
+    border: solid 1px #ddd;
+    /*box-shadow: 5px 5px 3px #aaaaaa;*/
+    box-shadow: 0px 1px 1px #aaaaaa;
+}
+
+.profilePic {
+    width: 150px;
+    height: 184px;
+    border-radius: 4px;
+    border: solid 1px #337ab7;
+    /*box-shadow: 5px 5px 3px #aaaaaa;*/
+    box-shadow: 0px 1px 1px #aaaaaa;
+}
+
+.donateButton {
+    border-radius: 4px;
+    border: solid 1px #337ab7;
+    background-color: #337ab7;
+    height: 65px;
+    width: 372px;
+}
+
+.aboutHeader{
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    padding-right: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.nav-link {
+    padding-right: 70px;
+    text-decoration: none;
+}
+
+footer {
+    /*position: absolute;*/
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 3px;
+    background-color: #337ab7;
+    color: white;
+}
+

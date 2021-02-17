@@ -1,5 +1,4 @@
-# tomusappi
-Mikä tomusäppi on?
+# Mikä tomusäppi on?
                 Tomusäppi on verkkosivu, jonka avulla harjoitellessa käydään läpi tyylilajiin, sävellajiin, harmoniaan, sekä melodiaan liittyviä seikkoja.
                     Näin ollen kehitetään ymmärrystä tonaalisesta musiikista mahdollisimman kokonaisvaltaisesti.
                 Tomusäppiä voi käyttää esimerkiksi teoria-, yhtye-, ja instrumenttitunneilla, yksin tai ryhmässä, kotona tai koulussa.</p><p>Alun perin idea verkkosivusta tuli huomatessani

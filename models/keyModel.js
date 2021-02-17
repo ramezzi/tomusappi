@@ -6,8 +6,8 @@ if (window.localStorage) {
     const cmajor4 = { name: 'Cmajor4', ton:[ "C6", "Em7", "Am7" ], subdom:[ "Dm7", "Fmaj7"], dom:[ "G7", "Bm7(♭5)"], isMolli: false  };
     const aminor3 = { name: 'Aminor3', ton:[ "Am", "C"], subdom:[ "B°", "Dm", "F"], dom:[ "E", "G♯°"], isMolli: true  };
     const aminor4 = { name: 'Aminor4', ton:[ "Am6", "C6"], subdom:[ "Bm7(♭5)", "Dm7", "Fmaj7"], dom:[ "E7", "G♯°7"] , isMolli: true };
-    const gmajor3 = { name: 'Gmajor3', ton:[ "G", "Bm", "Em,"], subdom:[ "Am", "C"], dom:[ "D", "F♯°"], isMolli: false  };
-    const gmajor4 = { name: 'Gmajor4', ton:[ "G6", "Bm7", "Em7,"], subdom:[ "Am7", "Cmaj7"], dom:[ "D7", "F♯m7(♭5)"], isMolli: false  };
+    const gmajor3 = { name: 'Gmajor3', ton:[ "G", "Bm", "Em"], subdom:[ "Am", "C"], dom:[ "D", "F♯°"], isMolli: false  };
+    const gmajor4 = { name: 'Gmajor4', ton:[ "G6", "Bm7", "Em7"], subdom:[ "Am7", "Cmaj7"], dom:[ "D7", "F♯m7(♭5)"], isMolli: false  };
     const eminor3 = { name: 'Eminor3', ton:[ "Em", "G"], subdom:[ "F♯°", "Am", "C"], dom:[ "B", "D♯°"], isMolli: true  };
     const eminor4 = { name: 'Eminor4', ton:[ "Em6", "G6"], subdom:[ "F♯m7(♭5)", "Am7", "Cmaj7"], dom:[ "B7", "D♯°7"], isMolli: true  };
     const dmajor3 = { name: 'Dmajor3', ton:[ "D", "F♯m", "Bm" ], subdom:[ "Em", "G"], dom:[ "A", "C♯°"], isMolli: false  };
